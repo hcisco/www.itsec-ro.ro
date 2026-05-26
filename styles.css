@@ -1,0 +1,451 @@
+﻿@charset "utf-8";
+/* Stylish site theme for ITSEC */
+
+:root {
+  --bg-start: #0b223d;
+  --bg-end: #132f57;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.14);
+  --text: #f3f8ff;
+  --text-muted: #b8c8e7;
+  --accent: #6fd8ff;
+  --accent-strong: #7be8ff;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html,
+html * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(111, 216, 255, 0.14), transparent 28%),
+    linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  padding: 24px 20px;
+}
+
+.row {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.style-logo_mainITSEC {
+  display: block;
+  max-width: 170px;
+  height: auto;
+}
+
+.style-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.style-nav ul li {
+  display: inline-flex;
+}
+
+.style-nav ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.92rem;
+  border-radius: 999px;
+  transition: all 180ms ease;
+}
+
+.style-nav ul li a:hover,
+.style-nav ul li a:focus {
+  color: var(--bg-start);
+  background: rgba(111, 216, 255, 0.18);
+}
+
+#lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  margin-left: 8px;
+  color: var(--text);
+  background: rgba(111, 216, 255, 0.12);
+  border: 1px solid rgba(111, 216, 255, 0.3);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+#lang-toggle:hover {
+  background: rgba(111, 216, 255, 0.22);
+  border-color: rgba(111, 216, 255, 0.5);
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 0;
+  padding: 14px 30px;
+  color: var(--bg-start);
+  background: var(--accent);
+  border-radius: 999px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 18px 40px rgba(111, 216, 255, 0.18);
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  transform: translateY(-1px);
+  background: #8de7ff;
+  box-shadow: 0 22px 48px rgba(111, 216, 255, 0.25);
+}
+
+main {
+  padding: 0 0 48px;
+}
+
+.hero,
+.desprenoi,
+.serviciisoft,
+.serviciihard,
+.contact,
+.audit,
+.helpdesk {
+  position: relative;
+  margin: 32px auto;
+  padding: 56px 28px;
+  max-width: 1120px;
+  min-height: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: var(--surface);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.hero::before,
+.desprenoi::before,
+.serviciisoft::before,
+.serviciihard::before,
+.audit::before,
+.helpdesk::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 23, 41, 0.22), rgba(5, 12, 23, 0.78));
+  pointer-events: none;
+}
+
+.hero {
+  background-image: url("images/image_1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.desprenoi {
+  background-image: url("images/image_desprenoi.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.serviciisoft {
+  background-image: url("images/image_soft.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.serviciihard {
+  background-image: url("images/image_hard.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.audit {
+  background-image: url("images/audit.jpg");
+  color: var(--text);
+  background-position: center;
+  text-align: center;
+}
+
+.audit h1 {
+  max-width: 860px;
+  margin: 0 auto 28px;
+}
+
+.audit p {
+  color: var(--text-muted);
+  font-size: clamp(1.05rem, 1.4vw, 1.55rem);
+  line-height: 1.85;
+  max-width: 860px;
+  margin: 0 auto 24px;
+}
+
+.helpdesk {
+  background-image: url("images/helpdesk.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact {
+  background: linear-gradient(180deg, rgba(7, 23, 41, 0.94), rgba(5, 12, 23, 0.95));
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.contact-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.24);
+}
+
+.contact-details {
+  max-width: 680px;
+}
+
+.contact-details h1 {
+  margin-bottom: 18px;
+}
+
+.contact-info {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.contact-info p {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.contact-info strong {
+  color: var(--accent);
+}
+
+.contact-details p {
+  margin-bottom: 18px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  color: var(--text);
+  padding: 14px 16px;
+  font-size: 0.98rem;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(111, 216, 255, 0.14);
+}
+
+.hero h1,
+.desprenoi h1,
+.serviciisoft h1,
+.serviciihard h1,
+.contact h1,
+.audit h1,
+.helpdesk h1 {
+  font-size: clamp(2.4rem, 3.2vw, 3.8rem);
+  line-height: 1.05;
+  margin-bottom: 18px;
+  color: var(--accent-strong);
+  letter-spacing: -0.03em;
+  text-shadow: 0 12px 35px rgba(35, 72, 110, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+h3 {
+  font-size: clamp(1.05rem, 1.4vw, 1.55rem);
+  font-weight: 400;
+  max-width: 860px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  line-height: 1.85;
+  text-transform: none;
+  position: relative;
+  z-index: 1;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 18px 0 12px;
+  text-transform: none;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 24px;
+  text-transform: none;
+  max-width: 860px;
+  line-height: 1.8;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer {
+  padding: 28px 0 42px;
+  background: rgba(8, 20, 34, 0.84);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 1023px) {
+  header {
+    padding: 18px 16px;
+  }
+
+  header .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .style-nav ul {
+    gap: 10px;
+  }
+
+  .hero,
+  .desprenoi,
+  .serviciisoft,
+  .serviciihard,
+  .contact,
+  .audit,
+  .helpdesk {
+    margin: 24px 16px;
+    padding: 42px 22px;
+    min-height: auto;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  h3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .style-nav ul {
+    flex-direction: column;
+  }
+
+  .style-nav ul li a {
+    width: 100%;
+  }
+
+  .hero,
+  .desprenoi,
+  .serviciisoft,
+  .serviciihard,
+  .contact,
+  .audit,
+  .helpdesk {
+    padding: 32px 18px;
+    border-radius: 24px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
