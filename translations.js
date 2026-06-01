@@ -191,4 +191,27 @@ document.addEventListener('DOMContentLoaded', function() {
       currentLang = newLang;
     });
   }
+
+  // Setup mobile nav toggle button
+  const nav = document.querySelector('.style-nav');
+  const navToggle = document.getElementById('nav-toggle');
+  const mainNav = document.getElementById('main-navigation');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', function() {
+      const isOpen = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  if (mainNav && nav) {
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        if (nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          navToggle?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
 });
