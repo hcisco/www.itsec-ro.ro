@@ -126,29 +126,6 @@ header .row {
   border-color: rgba(111, 216, 255, 0.5);
 }
 
-#nav-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 0 18px;
-  min-width: 56px;
-  min-height: 56px;
-  margin-right: 10px;
-  color: var(--text);
-  background: rgba(111, 216, 255, 0.18);
-  border: 1px solid rgba(111, 216, 255, 0.4);
-  border-radius: 20px;
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: all 180ms ease;
-}
-
-#nav-toggle:hover,
-#nav-toggle:focus-visible {
-  background: rgba(111, 216, 255, 0.22);
-  border-color: rgba(111, 216, 255, 0.5);
-}
 
 .button-primary {
   display: inline-flex;
@@ -460,29 +437,9 @@ footer {
     margin: 0 auto;
   }
 
-  .style-nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    margin: 0;
-  }
-
-  .style-nav.open ul {
-    display: flex;
-  }
-
-  #nav-toggle {
-    display: inline-flex;
-  }
-
   #lang-toggle {
     margin-left: 0;
     margin-top: 12px;
-  }
-
-  .style-nav.open #lang-toggle {
-    width: 100%;
   }
 }
 
