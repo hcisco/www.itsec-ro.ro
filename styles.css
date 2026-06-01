@@ -463,7 +463,7 @@ footer {
   .style-nav ul {
     display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     width: 100%;
     margin: 0;
   }
